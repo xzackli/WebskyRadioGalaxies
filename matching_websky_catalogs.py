@@ -46,8 +46,10 @@ def main(args):
                             all_sources=True
                               )
 
+    nuref = args.reference_freq *u.GHz
+    imin = np.argmin(np.fabs(fc.nu - nuref))
+    idx = pl.argsort(fc._fluxes[fc.nu[imin].value]) 
     for freq in args.frequencies   :
-        idx = pl.argsort (  fc._fluxes[freq] )
         massaged =  pl.zeros_like (   data_dic['flux'] )
         pmassaged =  pl.zeros_like (   data_dic['flux'] )
         massaged[ids] = fc._fluxes[freq][idx]
