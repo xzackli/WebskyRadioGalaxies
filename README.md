@@ -1,7 +1,16 @@
 # WebskyRadioGalaxies
 
 Catalogs  are available online 
-[here](https://portal.nersc.gov/project/sobs/users/Radio_WebSky/matched_catalogs/)
+[here](https://portal.nersc.gov/project/sobs/users/Radio_WebSky/matched_catalogs/). Catalogs are HDF5 files with 
+
+```
+import h5py
+
+f = h5py.File('catalog_100.0.h5', 'r')
+print(f.keys())
+```
+
+The number in the filename refers to the frequency band center. This will output ['flux', 'phi', 'theta']. The fluxes are in Jansky. Angles are outputs from healpix vec2ang, so theta and phi are the colatitude and longitude in radians. 
 
 ## Matching Catalogs script 
 
