@@ -28,5 +28,8 @@ The code is publicly available and documented [here](http://giuspugl.github.io/p
  python setup.py install
 ```
 
+## Radio spectral indices
 
+The [spectral-index notebook](notebooks/websky-radio-spectral-indices.ipynb) compares the AT20G and Planck measurements with Figure 4 of the [Websky preprint](https://arxiv.org/pdf/2110.15357v2#page=5). It also shows how a Galactic latitude cut changes the Planck medians.
 
+The figure is saved in the notebook. To rerun it, use a Python 3 Jupyter kernel with NumPy, Matplotlib 3.6 or newer, and internet access for the public PS4C tables.
